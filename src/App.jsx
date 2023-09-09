@@ -2,6 +2,9 @@ import '../App.css';
 import HeaderMenu from './Components/Header/Menu';
 import Products from './Components/Cakelist/Products'; //If it's variable = we don't use curle braces
 import Slider from './Components/Imageslider/Slider';
+import Footer from './Components/Footer/Footer';
+import Telegramform from './Components/Contactform/Telegramform';
+import Appearmodal from './Components/Contactform/AppearModal/Appearmodal';
 import { Carousel } from 'bootstrap';
 
 function App() {
@@ -23,7 +26,7 @@ function App() {
       describe: 'Сметанные коржи с низким сожержанием сахара, сметанный кисленький крем, нежная текстура пропитанного бисквита, гипоаллергенная начинка, подходящая для детей и мам на ГВ В составе сметана, мука пшеничная, яйца, растительное масло, сода. Начинка не подходит для 3Д тортов, подходит только для верхнего яруса ярусного торта.'
     },
     {
-      id: 2,
+      id: 3,
       img: 'https://cake-time.ru/wp-content/uploads/2021/11/pre1_5.jpg',
       name: 'Napoleon',
       describe: 'Рубленое тесто, сделанное по фирменному рецепту кондитерской, заварной крем на белом шоколаде с настоящей бурбонской ванилью.'
@@ -56,9 +59,17 @@ function App() {
     <>
       <HeaderMenu logo={logoHeader} />
 
+      <Products cakes={catalog} />
+
       <Slider sliders={carouselItems} />
 
-      <Products cakes={catalog} />
+      <Telegramform>
+
+        <Appearmodal />
+
+      </Telegramform>
+
+      <Footer />
     </>
   );
 };

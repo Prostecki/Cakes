@@ -1,5 +1,5 @@
 function HeaderMenu({ logo }) {
-    return(
+    return (
             <div className="menu">
                 <div>
                     {logo.map((image, index) => 
