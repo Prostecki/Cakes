@@ -2,7 +2,7 @@ function Slider({ sliders }) {
 
   return (
 
-<div className="container">
+<div className="containerSlider">
     <div id="mySlider" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
             {sliders.map((slide) => (

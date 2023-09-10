@@ -56,7 +56,7 @@ function App() {
     ];
 
   return (
-    <>
+    <div className='cakeBody'>
       <HeaderMenu logo={logoHeader} />
 
       <Products cakes={catalog} />
@@ -70,7 +70,7 @@ function App() {
       </Telegramform>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

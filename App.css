@@ -1,12 +1,16 @@
-body {
+.cakeBody {
+    background-color: rgb(204, 147, 103);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .wrapper {
-    width: 1300px;
+    width: 100%;
     height: auto;
     border: 1px solid black;
     margin: 0 auto;
@@ -19,20 +23,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-color: rgb(55, 40, 27);
 }
 
 .menu > div {
     margin-right: 20px;
 }
 
+.menuName {
+    color: white;
+    width: 400px;
+    text-align: center;
+}
+
 .content {
-    width: 1200px;
-    margin: 0 auto;
-    height: auto;
+        /* width: 1200px; */
+    /* margin: 0 auto; */
+    /* height: auto; */
     display: flex;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    flex-wrap: wrap;
     /* background-color: grey; */
     position: relative;
 }
@@ -63,10 +73,10 @@ body {
 }
 
 .carousel {
-    margin: 0 auto;
-    width: 1000px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .carousel-inner-width {
@@ -82,8 +92,10 @@ body {
     margin: 10px;
 }
 
-.container {
-    padding: 10px;
+.containerSlider {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .containerForm {

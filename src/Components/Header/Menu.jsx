@@ -6,6 +6,7 @@ function HeaderMenu({ logo }) {
                 <img className="logoView" src={image.img} key={index} />
                 )}
                 </div>
+                <div className="menuName">Anastasia Taratynova Bakery</div>
                 <div className="menu">
                     <div><a className="menuLinks" href="">Cakes</a></div>
                     <div><a className="menuLinks" href="">Others</a></div>
