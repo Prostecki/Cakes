@@ -1,4 +1,13 @@
-function Feedback () {
+import React, { useState } from 'react';
+function Feedback ({openModal}) {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleClick = () => {
+
+        openModal(true);
+
+    }
 
     const sendRequest = (text) => {
         //create array whose can send request
@@ -87,7 +96,7 @@ function Feedback () {
                     <textarea id="message" name="message" type="text" maxLength="5000" placeholder="Write your message"></textarea>
                 </div>
                 
-                <button className="btnSend" id="submitButton" onClick={sendToTelega}>
+                <button className="btnSend" id="submitButton" onClick={handleClick}>
                     <span className="hitMeBtn">Hit me up!</span>
                 </button>
             </div>

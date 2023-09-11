@@ -4,8 +4,10 @@ import Products from './Components/Cakelist/Products'; //If it's variable = we d
 import Slider from './Components/Imageslider/Slider';
 import Footer from './Components/Footer/Footer';
 import Telegramform from './Components/Contactform/Telegramform';
-import Appearmodal from './Components/Contactform/AppearModal/Appearmodal';
+import Appearmodal from './Components/AppearModal/Appearmodal';
 import { Carousel } from 'bootstrap';
+import { useState } from 'react';
+import Feedback from './Components/Contactform/Telegramform';
 
 function App() {
 
@@ -55,6 +57,20 @@ function App() {
     },
     ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleFormSubmit = () => {
+    openModal();
+  };
+
   return (
     <div className='cakeBody'>
       <HeaderMenu logo={logoHeader} />
@@ -63,11 +79,9 @@ function App() {
 
       <Slider sliders={carouselItems} />
 
-      <Telegramform>
+      <Feedback handleFormSubmit={handleFormSubmit} />
 
-        <Appearmodal />
-
-      </Telegramform>
+      <Appearmodal isOpen={isModalOpen} closeModal={closeModal} />
 
       <Footer />
     </div>
